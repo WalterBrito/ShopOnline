@@ -40,6 +40,8 @@ INSTALLED_APPS = (
     'shop',
     'cart',
     'orders',
+    'paypal.standard.ipn',
+    'payment',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -113,3 +115,6 @@ CART_SESSION_ID = 'cart'
 # tell Django to write emails to the console
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+# django-paypal settings
+PAYPAL_RECEIVER_EMAIL = 'django.framework001@gmail.com'
+PAYPAL_TEST = True
