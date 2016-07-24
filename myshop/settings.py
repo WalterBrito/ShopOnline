@@ -113,7 +113,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 CART_SESSION_ID = 'cart'
 
 # tell Django to write emails to the console
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Configuration SMTP Server
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackends'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'django.framework001@gmail.com'
+EMAIL_HOST_PASSWORD = 'django001'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # django-paypal settings
 PAYPAL_RECEIVER_EMAIL = 'django.framework001@gmail.com'
