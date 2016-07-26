@@ -4,7 +4,7 @@ from django.core.mail import EmailMessage
 from django.conf import settings
 from paypal.standard.models import ST_PP_COMPLETED
 from paypal.standard.ipn.signals import valid_ipn_received
-import weasyprint
+#import weasyprint
 from io import BytesIO
 from orders.models import Order
 
