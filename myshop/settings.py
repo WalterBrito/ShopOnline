@@ -43,7 +43,8 @@ INSTALLED_APPS = (
     'paypal.standard.ipn',
     'payment',
     'coupons',
-    'rosetta'
+    'rosetta',
+    'parler',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -144,3 +145,17 @@ EMAIL_USE_TLS = True
 # django-paypal settings
 PAYPAL_RECEIVER_EMAIL = 'django.framework001@gmail.com'
 PAYPAL_TEST = True
+
+# django-parler settings
+PARLER_LANGUAGES = {    
+    None: (
+        {'code': 'en',},
+        {'code': 'es',},
+        {'code': 'fr',},
+        {'code': 'it',},
+    ),
+    'default': {
+        'fallback': 'en',
+        'hide_untraslated': False,
+    }
+}
