@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-26 18:12-0300\n"
+"POT-Creation-Date: 2016-07-27 09:55-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,27 +19,27 @@ msgstr ""
 
 #: models.py:11
 msgid "first name"
-msgstr "nombre"
+msgstr ""
 
 #: models.py:13
 msgid "last name"
-msgstr "apellidos"
+msgstr ""
 
 #: models.py:15
 msgid "e-mail"
-msgstr "e-mail"
+msgstr ""
 
 #: models.py:16
 msgid "address"
-msgstr "dirección"
+msgstr ""
 
 #: models.py:18
 msgid "postal code"
-msgstr "código postal"
+msgstr ""
 
 #: models.py:20
 msgid "city"
-msgstr "ciudad"
+msgstr ""
 
 #: templates/orders/create.html:5 templates/orders/create.html.py:9
 msgid "Checkout"

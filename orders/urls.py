@@ -1,8 +1,9 @@
 from django.conf.urls import url
 from . import views
+from django.utils.translation import gettext_lazy as _
 
 urlpatterns = [
-    url(r'^create/$',
+    url(_(r'^create/$'),
         views.order_create,
         name='order_create'),
     url(r'^admin/order/(?P<order_id>\d+)/$',
