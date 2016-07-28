@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'coupons',
     'rosetta',
     'parler',
+    'localflavor',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -159,3 +160,8 @@ PARLER_LANGUAGES = {
         'hide_untraslated': False,
     }
 }
+
+# Redis settings
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+REDIS_DB = 1
