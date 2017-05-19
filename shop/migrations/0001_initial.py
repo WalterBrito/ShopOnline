@@ -13,21 +13,21 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Category',
             fields=[
-                ('id', models.AutoField(primary_key=True, verbose_name='ID', auto_created=True, serialize=False)),
-                ('name', models.CharField(db_index=True, max_length=200)),
-                ('slug', models.SlugField(unique=True, max_length=200)),
+                ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
+                ('name', models.CharField(max_length=200, db_index=True)),
+                ('slug', models.SlugField(max_length=200, unique=True)),
             ],
             options={
-                'verbose_name_plural': 'categories',
                 'verbose_name': 'category',
+                'verbose_name_plural': 'categories',
                 'ordering': ('name',),
             },
         ),
         migrations.CreateModel(
             name='Product',
             fields=[
-                ('id', models.AutoField(primary_key=True, verbose_name='ID', auto_created=True, serialize=False)),
-                ('name', models.CharField(db_index=True, max_length=200)),
+                ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
+                ('name', models.CharField(max_length=200, db_index=True)),
                 ('slug', models.SlugField(max_length=200)),
                 ('image', models.ImageField(blank=True, upload_to='products/%Y/%m/%d')),
                 ('description', models.TextField(blank=True)),

@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ')7-0vj371pc+%t%3skf^ca^u^u3d!^5fau$*yx%agcax$quy-#'
+SECRET_KEY = 'y%d7u*2pb#u@xn18%(!=6s1s=z&k(b@p$p!aep&72_kuu+w9vm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,19 +38,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'shop',
-    'cart',
-    'orders',
-    'paypal.standard.ipn',
-    'payment',
-    'coupons',
-    'rosetta',
-    'parler',
-    'localflavor',
 )
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -73,7 +64,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'cart.context_processors.cart',
             ],
         },
     },
@@ -96,20 +86,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en'
-
-from django.utils.translation import gettext_lazy as _
-
-LANGUAGES = (
-    ('en', _('English')),
-    ('es', _('Spanish')),
-    ('fr', _('French')),
-    ('it', _('Italian')),
-)
-
-LOCALE_PATHS = (
-    os.path.join(BASE_DIR, 'locale/'),
-)
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
@@ -124,44 +101,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-
-CART_SESSION_ID = 'cart'
-
-# tell Django to write emails to the console
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-# Configuration SMTP Server
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackends'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'django.framework001@gmail.com'
-EMAIL_HOST_PASSWORD = 'django001'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-
-# django-paypal settings
-PAYPAL_RECEIVER_EMAIL = 'django.framework001@gmail.com'
-PAYPAL_TEST = True
-
-# django-parler settings
-PARLER_LANGUAGES = {    
-    None: (
-        {'code': 'en',},
-        {'code': 'es',},
-        {'code': 'fr',},
-        {'code': 'it',},
-    ),
-    'default': {
-        'fallback': 'en',
-        'hide_untraslated': False,
-    }
-}
-
-# Redis settings
-REDIS_HOST = 'localhost'
-REDIS_PORT = 6379
-REDIS_DB = 1
