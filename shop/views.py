@@ -23,3 +23,4 @@ def product_list(request, id, slug):
                   'shop/product/detail.html',
                   {'product': product})
 
+
