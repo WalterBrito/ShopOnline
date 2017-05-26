@@ -5,6 +5,8 @@ billiard==3.3.0.23
 celery==3.1.18
 decorator==4.0.11
 Django==1.8.6
+django-celery==3.2.1
+django-paypal==0.2.5
 flower==0.9.1
 ipython==6.0.0
 ipython-genutils==0.2.0
@@ -19,8 +21,10 @@ ptyprocess==0.5.1
 Pygments==2.2.0
 pytz==2017.2
 redis==2.10.3
+requests==2.14.2
 simplegeneric==0.8.1
 six==1.10.0
+South==1.0.2
 tornado==4.2
 traitlets==4.3.2
 wcwidth==0.1.7
