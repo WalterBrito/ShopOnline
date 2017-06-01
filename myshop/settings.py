@@ -109,5 +109,5 @@ CART_SESSION_ID = 'cart'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # django-paypal settings
-PAYPAL_RECEIVER_EMAIL = 'userpalpalemail@mail.com'
+PAYPAL_RECEIVER_EMAIL = 'django.framework001@gmail.com'
 PAYPAL_TEST = True
